@@ -1,0 +1,445 @@
+﻿{
+  "Scenario": "Regression",
+  "DataSource": {
+    "Type": "TabularFile",
+    "Version": 1,
+    "FilePath": "C:\\Users\\Duke\\Documents\\src\\Machine-Learning-in-.NET--ML.NET--House-Price-Forecast\\HaNoi-VN_housing_dataset.csv",
+    "Delimiter": ",",
+    "DecimalMarker": ".",
+    "HasHeader": true,
+    "ColumnProperties": [
+      {
+        "ColumnName": "Địa chỉ",
+        "ColumnPurpose": "Ignore",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Quận",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Huyện",
+        "ColumnPurpose": "Ignore",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Loại Hình",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Pháp Lý",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Số Tầng",
+        "ColumnPurpose": "Ignore",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Số Phòng Ngủ",
+        "ColumnPurpose": "Ignore",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Diện tích sử dụng",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Giá thị trường",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      }
+    ]
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 3,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastForestRegression",
+        "Score": 0.32143634306241364,
+        "RuntimeInSeconds": 0.958,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e4",
+          "e0": {
+            "OutputColumnNames": [
+              "Quận",
+              "Loại Hình",
+              "Pháp Lý"
+            ],
+            "InputColumnNames": [
+              "Quận",
+              "Loại Hình",
+              "Pháp Lý"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "Diện tích sử dụng"
+            ],
+            "InputColumnNames": [
+              "Diện tích sử dụng"
+            ]
+          },
+          "e2": {
+            "InputColumnNames": [
+              "Quận",
+              "Loại Hình",
+              "Pháp Lý",
+              "Diện tích sử dụng"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e4": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "Giá thị trường",
+            "FeatureColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "Giá thị trường",
+            "FeatureColumnName": "Features"
+          },
+          "e5": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 1.0,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 1.0,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Giá thị trường",
+            "FeatureColumnName": "Features"
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Giá thị trường",
+            "FeatureColumnName": "Features"
+          },
+          "e7": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "Giá thị trường",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastForestRegression",
+        "Score": 0.30508054311829913,
+        "RuntimeInSeconds": 0.274,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e4",
+          "e0": {
+            "OutputColumnNames": [
+              "Quận",
+              "Loại Hình",
+              "Pháp Lý"
+            ],
+            "InputColumnNames": [
+              "Quận",
+              "Loại Hình",
+              "Pháp Lý"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "Diện tích sử dụng"
+            ],
+            "InputColumnNames": [
+              "Diện tích sử dụng"
+            ]
+          },
+          "e2": {
+            "InputColumnNames": [
+              "Quận",
+              "Loại Hình",
+              "Pháp Lý",
+              "Diện tích sử dụng"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e4": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 26,
+            "FeatureFraction": 0.920975566,
+            "LabelColumnName": "Giá thị trường",
+            "FeatureColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "Giá thị trường",
+            "FeatureColumnName": "Features"
+          },
+          "e5": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 1.0,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 1.0,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Giá thị trường",
+            "FeatureColumnName": "Features"
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Giá thị trường",
+            "FeatureColumnName": "Features"
+          },
+          "e7": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "Giá thị trường",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmRegression",
+        "Score": 0.28504138974914128,
+        "RuntimeInSeconds": 0.48,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e5",
+          "e0": {
+            "OutputColumnNames": [
+              "Quận",
+              "Loại Hình",
+              "Pháp Lý"
+            ],
+            "InputColumnNames": [
+              "Quận",
+              "Loại Hình",
+              "Pháp Lý"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "Diện tích sử dụng"
+            ],
+            "InputColumnNames": [
+              "Diện tích sử dụng"
+            ]
+          },
+          "e2": {
+            "InputColumnNames": [
+              "Quận",
+              "Loại Hình",
+              "Pháp Lý",
+              "Diện tích sử dụng"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e5": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 1.0,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 1.0,
+            "MaximumBinCountPerFeature": 254,
+            "FeatureFraction": 1.0,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Giá thị trường",
+            "FeatureColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "Giá thị trường",
+            "FeatureColumnName": "Features"
+          },
+          "e4": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "Giá thị trường",
+            "FeatureColumnName": "Features"
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Giá thị trường",
+            "FeatureColumnName": "Features"
+          },
+          "e7": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "Giá thị trường",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastTreeRegression",
+        "Score": -1.00407515898002,
+        "RuntimeInSeconds": 0.306,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3",
+          "e0": {
+            "OutputColumnNames": [
+              "Quận",
+              "Loại Hình",
+              "Pháp Lý"
+            ],
+            "InputColumnNames": [
+              "Quận",
+              "Loại Hình",
+              "Pháp Lý"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "Diện tích sử dụng"
+            ],
+            "InputColumnNames": [
+              "Diện tích sử dụng"
+            ]
+          },
+          "e2": {
+            "InputColumnNames": [
+              "Quận",
+              "Loại Hình",
+              "Pháp Lý",
+              "Diện tích sử dụng"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 254,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "Giá thị trường",
+            "FeatureColumnName": "Features"
+          },
+          "e4": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "Giá thị trường",
+            "FeatureColumnName": "Features"
+          },
+          "e5": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 1.0,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 1.0,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Giá thị trường",
+            "FeatureColumnName": "Features"
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Giá thị trường",
+            "FeatureColumnName": "Features"
+          },
+          "e7": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "Giá thị trường",
+            "FeatureColumnName": "Features"
+          }
+        }
+      }
+    ],
+    "Estimators": {
+      "e0": "OneHotEncoding",
+      "e1": "ReplaceMissingValues",
+      "e2": "Concatenate",
+      "e3": "FastTreeRegression",
+      "e4": "FastForestRegression",
+      "e5": "LightGbmRegression",
+      "e6": "LbfgsPoissonRegressionRegression",
+      "e7": "SdcaRegression"
+    },
+    "Schema": "e0 * e1 * e2 * (e3 + e4 + e5 + e6 + e7)",
+    "MetricName": "RSquared",
+    "ModelFilePath": "C:\\source\\Machine-Learning-in-.NET--ML.NET--House-Price-Forecast\\lib\\HousePriceForecast.mlnet"
+  },
+  "Type": "TrainingConfig",
+  "Version": 4,
+  "TrainingOption": {
+    "Version": 1,
+    "Type": "RegressionTrainingOption",
+    "TrainingTime": 10,
+    "LabelColumn": "Giá thị trường",
+    "ValidationOption": {
+      "Version": 0,
+      "Type": "TrainValidateSplitValidationOption",
+      "SplitRatio": 0.2
+    }
+  }
+}
